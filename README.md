@@ -66,7 +66,7 @@ addNew:function(){
 ```
 这里还通过ref来引用DOM元素，使用引用信息this.$refs.input.value来获取input输入的值，当值为空（即没有输入的时候），按下enter键会提示：“please input some content!”；当输入值不为空的时候，执行后面代码：将与input双向绑定的数据newItem赋给label，isFinished值为“false”，并且添加到数组里面；最后还要清空input输入框的内容：this.newItem=""。<br/>
 
-这里还要给列表li绑定class类和点击事件：<br/>
+### 这里还要给列表li绑定class类和点击事件：<br/>
 ```
 <li v-bind:class="{finished:item.isFinished}" v-on:click="toggleFinish(item)">
 toggleFinish:function(item){
